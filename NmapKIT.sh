@@ -847,7 +847,8 @@ function brutense	() {
 	    echo -e $white"	[$okegreen"70"$white]$cyan  xmpp-brute "
 	    echo -e $white"	[$okegreen"71"$white]$cyan  Back "
 	    echo -e " "
-	    echo -n -e $red'  \033[4mScreetsec@nse-brute:\033[0m>> '; tput sgr0 #insert your choice
+	    echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$yellow"brute-nse$okegreen]:"	
+    echo -ne $okegreen" └─────► " ;tput sgr0 
 	      	read Brute
 	             if test $Brute == '1'
 	          	then
@@ -1711,7 +1712,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
 
 function malware () {
   clear
-  echo -e $BlueF "nmw"
+  echo -e $BlueF "$nmw"
   echo
   echo -e $white"	[$okegreen"01"$white]$cyan auth-spoof	"
   echo -e $white"	[$okegreen"02"$white]$cyan dns-zeustracker	"
