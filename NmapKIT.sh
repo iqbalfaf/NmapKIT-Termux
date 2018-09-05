@@ -45,11 +45,17 @@ echo -e $yellow"$di"
 sleep 2
 clear
 echo -e $BlueF"$iqbal"
+clear
 echo -e $okegreen"$iqbal"
+clear
 echo -e $white"$iqbal"
+clear
 echo -e $yellow"$iqbal"
+clear
 echo -e $red"$iqbal"
+clear
 echo -e $BlueF"$iqbal"
+clear
 sleep 1
 echo -e $yellow"=================================="
 echo -e $yellow"Original      : $red"Script Dracnmap""
