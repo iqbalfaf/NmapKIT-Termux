@@ -30,7 +30,7 @@ echo "Install Nmap Selesai"
 sleep 1
 clear
 echo "Install Script NmapKIT"
-wget -O nmapkit https://raw.githubusercontent.com/iqbalfaf/NmapKIT-Termux/master/NmapKIT.sh
+mv NmapKIT.sh nmapkit
 mv nmapkit $PREFIX/bin/
 chmod +x $PREFIX/bin/nmapkit
 sleep 1
@@ -42,7 +42,8 @@ echo "================== NmapKIT ================== "
 echo "Original Script Dracnmap"
 echo "Recode IqbalFAF"
 echo ""
-echo "Untuk Menjalankan Tools nya cukup ketikan nmapkit"
+echo "Untuk Menjalankan Tools nya cukup ketikan"
+echo "nmapkit"
 echo "Terimakasih ^_^"
 echo "================== NmapKIT ================== "
 
