@@ -27,6 +27,14 @@ pong=$(figlet PingPong)
 welcome=$(figlet welcome)
 di=$(figlet TO)
 aut=$(figlet Auth-NSE)
+web=$(figlet WebService)
+nmw=$(figlet nse-malware)
+nvn=$(figlet ns-vuln)
+fuzz=$(figlet fuzzer)
+expo=$(figlet exploit)
+brtnse=$(figlet brute-nse)
+nsebrd=$(figlet nse-broadcast)
+nsc=$(figlet nmap-script)
 
 
 clear
@@ -36,6 +44,11 @@ clear
 echo -e $yellow"$di" 
 sleep 2
 clear
+echo -e $BlueF"$iqbal"
+echo -e $okegreen"$iqbal"
+echo -e $white"$iqbal"
+echo -e $yellow"$iqbal"
+echo -e $red"$iqbal"
 echo -e $BlueF"$iqbal"
 sleep 1
 echo -e $yellow"=================================="
@@ -52,16 +65,7 @@ sleep 1
 ####### NSE Menu #######
 function nse	() {
 clear
-echo -e $okegreen " "
-echo "    )   *           (      (         (   (   (            ";
-echo " ( /( (  \     (     )\ )   )\ )  (   )\ ))\ ))\ )  *   )  ";
-echo " )\()))\))(   )\   (()/(  (()/(  )\ (()/(()/(()/(\  )  /(  ";
-echo "((_)\((_)()((((_)(  /(_))  /(_)|((_) /(_))(_))(_))( )(_)) ";
-echo " _((_|_()((_)\ _ )\(_))   (_)) )\___(_))(_))(_)) (_(_())  ";
-echo "| \| |  \/  (_)_\(_) _ \  / __((/ __| _ \_ _| _ \|_   _|  ";
-echo "| .\ | |\/| |/ _ \ |  _/  \__ \| (__|   /| ||  _/  | |    ";
-echo "|_|\_|_|  |_/_/ \_\|_|    |___/ \___|_|_\___|_|    |_|    ";
-echo "                                                          ";
+echo -e $okegreen "$nsc"
 echo -e $red"  Nmap Script Engine - Advanced Scanning with Nmap Script "
 
 				echo -e $white " "
@@ -394,6 +398,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         else
             echo ""
             echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+            sleep 2
             auth
           fi
           echo ""
@@ -412,7 +417,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
 
 function brd () {
 clear
-  echo
+  echo -e $white "$nsebrd"
   echo
   echo -e $white"	[$okegreen"01"$white]$cyan broadcast-ataoe-discover	"
   echo -e $white"	[$okegreen"02"$white]$cyan broadcast-avahi-dos	"
@@ -464,49 +469,49 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         if test $min == '1'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-ataoe-discover -e $ie &
         elif test $min == '2'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=broadcast-avahi-dos -e $ie &
         elif test $min == '3'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-bjnp-discover -e $ie &
         elif test $min == '4'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script db2-discover -e $ie &
         elif test $min == '5'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-dhcp-discover -e $ie &
         elif test $min == '6'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit -6 --script broadcast-dhcp6-discover -e $ie &
         elif test $min == '7'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=broadcast-dns-service-discovery -e $ie &
         elif test $min == '8'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=broadcast-dropbox-listener --script-args=newtargets -Pn -e $ie &
         elif test $min == '9'
@@ -514,37 +519,37 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
           echo
           echo -ne $okegreen " Masukan IP/Host Target : " ; tput sgr0
           read ip
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=broadcast-eigrp-discovery $ip -e $ie &
         elif test $min == '10'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-igmp-discovery -e $ie &
         elif test $min == '11'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-listener -e $ie &
         elif test $min == '12'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit nmap --script broadcast-ms-sql-discover -e $ie &
         elif test $min == '13'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=broadcast-netbios-master-browser -e $ie &
         elif test $min == '14'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-networker-discover -e $ie &
         elif test $min == '15'
@@ -556,25 +561,25 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '16'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit  --script broadcast-pc-anywhere -e $ie &
         elif test $min == '17'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-pc-duo -e $ie &
         elif test $min == '18'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit nmap --script broadcast-pim-discovery -e $ie &
         elif test $min == '19'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           echo -ne $okegreen " Default value for TTL is 64 & the length of the payload is 0" ; tput sgr0
           read ttl
@@ -588,37 +593,37 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '20'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-pppoe-discover -e $ie &
         elif test $min == '21'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-rip-discover -e $ie &
         elif test $min == '22'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-ripng-discover -e $ie &
         elif test $min == '23'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit -e $ie --script broadcast-sonicwall-discover &
         elif test $min == '24'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-sybase-asa-discover -e $ie &
         elif test $min == '25'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-tellstick-discover -e $ie &
         elif test $min == '26'
@@ -630,7 +635,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '27'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-versant-locate -e $ie &
         elif test $min == '28'
@@ -642,19 +647,19 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '29'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-wpad-discover -e $ie &
         elif test $min == '30'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-wsdd-discover -e $ie &
         elif test $min == '31'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script broadcast-xdmcp-discover -e $ie &
         elif test $min == '32'
@@ -666,19 +671,19 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '33'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=ipv6-multicast-mld-list -e $ie &
         elif test $min == '34'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script knx-gateway-discover -e $ie &
         elif test $min == '35'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           echo -ne $okegreen " Hostname to resolve : " ; tput sgr0
           read hostname
@@ -686,13 +691,13 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '36'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit -e $ie --script lltd-discovery &
         elif test $min == '37'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script mrinfo -e $ie &
         elif test $min == '38'
@@ -704,31 +709,31 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         elif test $min == '39'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=targets-ipv6-multicast-echo.nse --script-args "newtargets,interface=$ie" -sL &
         elif test $min == '40'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=targets-ipv6-multicast-invalid-dst.nse --script-args "newtargets,interface=$ie" -sP &
         elif test $min == '41'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script=targets-ipv6-multicast-mld.nse --script-args "newtargets,interface=$ie" &
         elif test $min == '42'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit --script targets-ipv6-multicast-slaac --script-args "newtargets,interface=$ie" -sP &
         elif test $min == '43'
           then
           echo
-          echo -ne $okegreen " What is your Interfaces" ; tput sgr0
+          echo -ne $okegreen " Masukan Interface Kamu " ; tput sgr0
           read ie
           $kit -sL --script=targets-sniffer --script-args=newtargets,targets-sniffer.timeout=5s,targets-sniffer.iface=$ie &
         elif test $min == '44'
@@ -737,6 +742,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         else
             echo ""
             echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+            sleep 2
             brd
           fi
           echo ""
@@ -753,9 +759,552 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         fi
 }
 
+function brutense	() {
+	clear
+
+		echo -e $red "$brtnse"
+		echo ""
+	    echo -e $white"	[$okegreen"01"$white]$cyan  afp-brute  "
+	    echo -e $white"	[$okegreen"02"$white]$cyan  ajp-brute "
+	    echo -e $white"	[$okegreen"03"$white]$cyan  backorifice-brute  "
+	    echo -e $white"	[$okegreen"04"$white]$cyan  cassandra-brute "
+	    echo -e $white"	[$okegreen"05"$white]$cyan  cics-enum "
+	    echo -e $white"	[$okegreen"06"$white]$cyan  cics-user-enum "
+	    echo -e $white"	[$okegreen"07"$white]$cyan  citrix-brute-xml"
+	    echo -e $white"	[$okegreen"08"$white]$cyan  cvs-brute  "
+	    echo -e $white"	[$okegreen"09"$white]$cyan  cvs-brute-repository "
+	    echo -e $white"	[$okegreen"10"$white]$cyan  domcon-brute  "
+	    echo -e $white"	[$okegreen"11"$white]$cyan  dpap-enum  "
+	    echo -e $white"	[$okegreen"12"$white]$cyan  drda-brute "
+	    echo -e $white"	[$okegreen"13"$white]$cyan  ftp-brute  "
+	    echo -e $white"	[$okegreen"14"$white]$cyan  http-from-brute "
+	    echo -e $white"	[$okegreen"15"$white]$cyan  http-iis-short-name-brute "
+	    echo -e $white"	[$okegreen"16"$white]$cyan  http-brute "
+	    echo -e $white"	[$okegreen"17"$white]$cyan  http-joomla-brute  "
+	    echo -e $white"	[$okegreen"18"$white]$cyan  http-proxy-brute "
+	    echo -e $white"	[$okegreen"19"$white]$cyan  http-wordpress-brute "
+	    echo -e $white"	[$okegreen"20"$white]$cyan  iax2-brute "
+	    echo -e $white"	[$okegreen"21"$white]$cyan  informix-brute "
+	    echo -e $white"	[$okegreen"22"$white]$cyan  ipmi-brute "
+	    echo -e $white"	[$okegreen"23"$white]$cyan  irc-brute "
+	    echo -e $white"	[$okegreen"24"$white]$cyan  irc-sasl-brute "
+	    echo -e $white"	[$okegreen"25"$white]$cyan  iscsi-brute "
+	    echo -e $white"	[$okegreen"26"$white]$cyan  ldap-brute "
+	    echo -e $white"	[$okegreen"27"$white]$cyan  imap-brute "
+	    echo -e $white"	[$okegreen"28"$white]$cyan  membase-brute "
+	    echo -e $white"	[$okegreen"29"$white]$cyan  mmouse-brute "
+	    echo -e $white"	[$okegreen"30"$white]$cyan  mongodb-brute "
+	    echo -e $white"	[$okegreen"31"$white]$cyan  ms-sql-brute "
+	    echo -e $white"	[$okegreen"32"$white]$cyan  mysql-brute "
+	    echo -e $white"	[$okegreen"33"$white]$cyan  mysql-enum "
+	    echo -e $white"	[$okegreen"34"$white]$cyan  mongodb-brute"
+	    echo -e $white"	[$okegreen"35"$white]$cyan  metasploit-msgrpc-brute "
+	    echo -e $white"	[$okegreen"36"$white]$cyan  metasploit-xmlrpc-brute  "
+	    echo -e $white"	[$okegreen"37"$white]$cyan  mikrotik-routeros-brute "
+	    echo -e $white"	[$okegreen"38"$white]$cyan  nessus-xmlrpc-brute "
+	    echo -e $white"	[$okegreen"39"$white]$cyan  netbus-brute "
+	    echo -e $white"	[$okegreen"40"$white]$cyan  nexpose-brute "
+	    echo -e $white"	[$okegreen"41"$white]$cyan  nje-node-brute "
+	    echo -e $white"	[$okegreen"42"$white]$cyan  nje-pass-brute "
+	    echo -e $white"	[$okegreen"43"$white]$cyan  nping-brute "
+	    echo -e $white"	[$okegreen"44"$white]$cyan  nessus-brute "
+	    echo -e $white"	[$okegreen"45"$white]$cyan  omp2-brute "
+	    echo -e $white"	[$okegreen"46"$white]$cyan  openvas-otp-brute "
+	    echo -e $white"	[$okegreen"47"$white]$cyan  oracle-brute "
+	    echo -e $white"	[$okegreen"48"$white]$cyan  oracle-brute-stealth "
+	    echo -e $white"	[$okegreen"49"$white]$cyan  oracle-sid-brute "
+	    echo -e $white"	[$okegreen"50"$white]$cyan  pcanywhere-brute "
+	    echo -e $white"	[$okegreen"51"$white]$cyan  pgsql-brute "
+	    echo -e $white"	[$okegreen"52"$white]$cyan  pop3-brute "
+	    echo -e $white"	[$okegreen"53"$white]$cyan  redis-brute "
+	    echo -e $white"	[$okegreen"54"$white]$cyan  rexec-brute "
+	    echo -e $white"	[$okegreen"55"$white]$cyan  rlogin-brute "
+	    echo -e $white"	[$okegreen"56"$white]$cyan  rpcap-brute "
+	    echo -e $white"	[$okegreen"57"$white]$cyan  rsync-brute "
+	    echo -e $white"	[$okegreen"58"$white]$cyan  rtsp-url-brute "
+	    echo -e $white"	[$okegreen"59"$white]$cyan  sip-brute "
+	    echo -e $white"	[$okegreen"60"$white]$cyan  socks-brute "
+	    echo -e $white"	[$okegreen"61"$white]$cyan  svn-brute "
+	    echo -e $white"	[$okegreen"62"$white]$cyan  tso-enum "
+	    echo -e $white"	[$okegreen"63"$white]$cyan  smb-brute "
+	    echo -e $white"	[$okegreen"64"$white]$cyan  smtp-brute  "
+	    echo -e $white"	[$okegreen"65"$white]$cyan  snmp-brute "
+	    echo -e $white"	[$okegreen"66"$white]$cyan  telnet-brute "
+	    echo -e $white"	[$okegreen"67"$white]$cyan  vtam-enum "
+	    echo -e $white"	[$okegreen"68"$white]$cyan  vmauthd-brute "
+	    echo -e $white"	[$okegreen"69"$white]$cyan  vnc-brute"
+	    echo -e $white"	[$okegreen"70"$white]$cyan  xmpp-brute "
+	    echo -e $white"	[$okegreen"71"$white]$cyan  Back "
+	    echo -e " "
+	    echo -n -e $red'  \033[4mScreetsec@nse-brute:\033[0m>> '; tput sgr0 #insert your choice
+	      	read Brute
+	             if test $Brute == '1'
+	          	then
+	          		echo
+	          		echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	           		read ip
+	              echo -ne $okegreen " Open Port on Target or Host:  " ; tput sgr0
+	             	read port
+								$kit -p $port --script afp-brute $ip &
+	          	elif test $Brute == '2'
+	           		then
+	           			echo
+	           			echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	           			read ip
+	                echo -ne $okegreen " Open Port on Target or Host:  " ; tput sgr0
+	              	read port
+	        				$kit -p $port $ip --script ajp-brute &
+	              elif test $Brute == '3'
+	                then
+	                echo
+	                echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	                echo -ne $okegreen " Open Port on Target or Host:  " ; tput sgr0
+	                read port
+									$kit -sU --script backorifice-brute $ip --script-args backorifice-brute.ports=$port &
+	              elif test $Brute == '4'
+	                then
+	                echo
+	                echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	                $kit -p 9160 $ip --script=cassandra-brute &
+	            elif test $Brute == '5'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit --script=cics-enum -p 23 $ip &
+	              		elif test $Brute == '6'
+	                	then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit --script=cics-user-enum -p 23 $ip &
+	              elif test $Brute == '7'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										echo -ne $okegreen " What Userdb " ; tput sgr0
+			  						read userdb
+										echo -ne $okegreen " What Passdb " ; tput sgr0
+			  						read passdb
+										echo -ne $okegreen " What domain " ; tput sgr0
+			  						read domain
+										$kit --script=citrix-brute-xml --script-args=userdb=$userdb,passdb=$passdb,ntdomain=$domain -p 80,443,8080 $ip &
+	              elif test $Brute == '8'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit -p 2401 --script cvs-brute $ip &
+	              elif test $Brute == '9'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit -p 2401 --script cvs-brute-repository $ip &
+	              elif test $Brute == '10'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit --script domcon-brute -p 2050 $ip &
+	              elif test $Brute == '11'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit --script dpap-brute -p 8770 $ip &
+	              elif test $Brute == '12'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+										$kit -p 50000 --script drda-brute $ip &
+	              elif test $Brute == '13'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+	                	echo -ne $okegreen " Open Port on Target or Host:  " ; tput sgr0
+	                  read port
+	                	$kit --script ftp-brute -p $port $ip &
+	              elif test $Brute == '14'
+	                then
+	                	echo
+	                	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                  read ip
+				$kit --script http-form-brute -p 80 $ip &
+	          elif test $Brute == '15'
+	       			then
+	       				echo
+	       				echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	        		  read ip
+								$kit -p80 --script http-iis-short-name-brute $ip &
+	       		elif test $Brute == '16'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	            	echo -ne $okegreen " Open Port on Target or Host:  " ; tput sgr0
+	              read port
+	            	$kit --script http-brute -p $port $ip &
+	       		elif test $Brute == '17'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	            	$kit -sV --script http-joomla-brute $ip &
+	       		elif test $Brute == '18'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	            	$kit --script http-proxy-brute -p 8080 $ip &
+	       		elif test $Brute == '19'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	            	$kit -sV --script http-wordpress-brute $ip &
+	       		elif test $Brute == '20'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sU -p 4569 $ip --script iax2-brute &
+	       		elif test $Brute == '21'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script informix-brute -p 9088 $ip &
+	       		elif test $Brute == '22'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sU --script ipmi-brute -p 623 $ip &
+	       		elif test $Brute == '23'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script irc-brute -p 6667 $ip &
+	       		elif test $Brute == '24'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script irc-sasl-brute -p 6667 $ip &
+	       		elif test $Brute == '25'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sV --script=iscsi-brute $ip &
+	       		elif test $Brute == '26'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 389 --script ldap-brute --script-args ldap.base='"cn=users,dc=cqure,dc=net"' $ip &
+	  		elif test $Brute == '27'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 143,993 --script imap-brute $ip &
+	  		elif test $Brute == '28'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 11211 --script membase-brute &
+	  		elif test $Brute == '29'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script mmouse-brute -p 51010 $ip &
+	  		elif test $Brute == '30'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 27017 $ip --script mongodb-brute &
+	  		elif test $Brute == '31'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 445 --script ms-sql-brute --script-args mssql.instance-all,userdb=customuser.txt,passdb=custompass.txt $ip &
+	  		elif test $Brute == '32'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script=mysql-brute $ip
+	  		elif test $Brute == '33'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								nmap --script=mysql-enum $ip &
+	  		elif test $Brute == '34'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 27017 $ip --script mongodb-brute &
+	          elif test $Brute == '35'
+	            then
+	            	echo
+	            	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script metasploit-msgrpc-brute -p 55553 $ip &
+	          elif test $Brute == '36'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	             $kit --script metasploit-xmlrpc-brute -p 55553 $ip &
+	           elif test $Brute == '37'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	             $kit -p 8728 --script mikrotik-routeros-brute $ip &
+	           elif test $Brute == '38'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sV --script=nessus-xmlrpc-brute $ip &
+	           elif test $Brute == '39'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 12345 --script netbus-brute $ip &
+	           elif test $Brute == '40'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script nexpose-brute -p 3780 $ip &
+	           elif test $Brute == '41'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sV --script=nje-node-brute $ip &
+	           elif test $Brute == '42'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script=nje-pass-brute --script-args=ohost='POTATO',rhost='CACTUS',sleep=5 -p 175 $ip &
+	           elif test $Brute == '43'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 9929 --script nping-brute $ip &
+	           elif test $Brute == '44'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	             	$kit --script nessus-brute -p 1241 $ip &
+	           elif test $Brute == '45'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 9390 --script omp2-brute $ip &
+	           elif test $Brute == '46'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sV --script=openvas-otp-brute $ip &
+	           elif test $Brute == '47'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script oracle-brute -p 1521 --script-args oracle-brute.sid=ORCL $ip &
+	           elif test $Brute == '48'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script oracle-brute-stealth -p 1521 --script-args oracle-brute-stealth.sid=ORCL $ip &
+	           elif test $Brute == '49'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script=oracle-sid-brute -p 1521-1560 $ip &
+	           elif test $Brute == '50'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script=pcanywhere-brute $ip &
+	           elif test $Brute == '51'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 5432 --script pgsql-brute $ip &
+	           elif test $Brute == '52'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sV --script=pop3-brute $ip &
+	           elif test $Brute == '53'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 6379 $ip --script redis-brute &
+	           elif test $Brute == '54'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 512 --script rexec-brute $ip &
+	           elif test $Brute == '55'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 513 --script rlogin-brute $ip &
+	           elif test $Brute == '56'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 2002 $ip --script rpcap-brute &
+	           elif test $Brute == '57'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -p 873 --script rsync-brute --script-args 'rsync-brute.module=www' $ip &
+	           elif test $Brute == '58'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	             	$kit --script rtsp-url-brute -p 554 $ip &
+	           elif test $Brute == '59'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit -sU -p 5060 $ip --script=sip-brute &
+	           elif test $Brute == '60'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script socks-brute -p 1080 $ip &
+	           elif test $Brute == '61'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script svn-brute --script-args svn-brute.repo=/svn/ -p 3690 $ip &
+	           elif test $Brute == '62'
+	             then
+	             	echo
+	             	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+								$kit --script=tso-enum -p 23 $ip &
+	           elif test $Brute == '63'
+	              then
+	              echo
+	              echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	              read ip
+	              $kit -sU -sS --script smb-brute.nse -p U:137,T:139 &
+	            elif test $Brute == '64'
+	              then
+	              	echo
+	              	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	              	$kit -p 25 --script smtp-brute $ip &
+	            elif test $Brute == '65'
+	               then
+	               	echo
+	               	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	               	echo -ne $okegreen " Located Wordlist ? :  " ; tput sgr0
+	                read wordlist
+	               $kit -sU --script snmp-brute $ip [--script-args snmp-brute.communitiesdb=$wordlist ]  &
+	             elif test $Brute == '66'
+	               then
+	               	echo
+	               	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	               	echo -ne $okegreen " Open Port on Target or Host (23):  " ; tput sgr0
+	                read port
+	               	$kit -p $port --script telnet-brute --script-args userdb=myusers.lst,passdb=mypwds.lst,telnet-brute.timeout=8s $ip &
+	            elif test $Brute == '67'
+	              then
+	              	echo
+	              	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+									$kit --script vtam-enum -p 23 $ip &
+	            elif test $Brute == '68'
+	              then
+	              	echo
+	              	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+									$kit -p 902 $ip --script vmauthd-brute &
+	             elif test $Brute == '69'
+	               then
+	               	echo
+	               	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	               	$kit --script vnc-brute -p 5900 $ip &
+	             elif test $Brute == '70'
+	               then
+	               	echo
+	               	echo -ne $okegreen " Masukan IP/Host Target: " ; tput sgr0
+	                read ip
+	               	$kit -p 5222 --script xmpp-brute $ip &
+	             elif test $Brute == '71'
+	               then
+	                nse
+	             else
+	                 echo ""
+	                 echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+	                 sleep 2
+	                 brutense
+	               fi
+	               		echo ""
+	               		echo ""
+	               		echo -n -e $red " Kembali Ke Menu Sebelumnya? ( Yes / No ) :"
+	             read back
+	             if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+	                 then
+	                 clear
+	                 menu
+	             elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+	                 then
+	                 brutense
+	             fi
+}
+
+
 function exploit () {
 clear
-  echo
+  echo -e $red "$expo"
   echo
   echo -e $white"	[$okegreen"01"$white]$cyan afp-path-vuln "
   echo -e $white"	[$okegreen"02"$white]$cyan clamav-exec   "
@@ -1077,6 +1626,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         else
             echo ""
             echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+            sleep 2
             exploit
           fi
           echo ""
@@ -1096,7 +1646,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
 
 function fuzzer () {
   clear
-  echo
+  echo -e $yellow "$fuzz"
   echo
   echo -e $white"	[$okegreen"01"$white]$cyan File dns-fuzz "
   echo -e $white"	[$okegreen"02"$white]$cyan File http-form-fuzzer	"
@@ -1130,6 +1680,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
         else
             echo ""
             echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+            sleep 2
             fuzzer
           fi
           echo ""
@@ -1149,7 +1700,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
 
 function malware () {
   clear
-  echo
+  echo -e $BlueF "nmw"
   echo
   echo -e $white"	[$okegreen"01"$white]$cyan auth-spoof	"
   echo -e $white"	[$okegreen"02"$white]$cyan dns-zeustracker	"
@@ -1227,6 +1778,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
       else
           echo ""
           echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+          sleep 2
           malware
         fi
         echo ""
@@ -1247,7 +1799,7 @@ function vuln () {
 
 
 clear
-echo
+echo -e $okegreen "$nvn"
 echo -e $white"	[$okegreen"01"$white]$cyan afp-path-vuln  "
 echo -e $white"	[$okegreen"02"$white]$cyan broadcast-avahi-dos "
 echo -e $white"	[$okegreen"03"$white]$cyan clamav-exec "
@@ -1875,6 +2427,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
       else
           echo ""
           echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+          sleep 2
           vuln
         fi
         echo ""
@@ -1896,13 +2449,7 @@ function WebService() {
   clear
 echo -e $cyan ""
 echo ""
-  echo -e $red " __      __      ___.       _________                  .__              ";
-  echo "/  \    /  \ ____\_ |__    /   _____/ ______________  _|__| ____  ____  ";
-  echo "\   \/\/   // __ \| __ \   \_____  \_/ __ \_  __ \  \/ /  |/ ___\/ __ \ ";
-  echo " \        /\  ___/| \_\ \  /        \  ___/|  | \/\   /|  \  \__\  ___/ ";
-  echo "  \__/\  /  \___  >___  / /_______  /\___  >__|    \_/ |__|\___  >___  >";
-  echo -e $okegreen
-  echo " -----------------------------------------------------------------------"
+  echo -e $red "$web "
   echo ""
     echo -e $white"	[$okegreen"01"$white]$cyan  DETECTING WEB APPLICATION FIREWALLS  "
     echo -e $white"	[$okegreen"02"$white]$cyan  DETECTING POSSIBLE XST VULNERABILITIES "
@@ -1995,6 +2542,7 @@ echo ""
     else
         echo ""
         echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+        sleep 2
         Webservice
       fi
       echo ""
@@ -2083,6 +2631,7 @@ echo -e $okegreen" ┌─["$red"IqbalFAF$okegreen]──[$red~$okegreen]─["$ye
      			else
      			    echo ""
      			    echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+     			    sleep 2
      			    scanner
      			  fi
      			  echo ""
@@ -2163,6 +2712,7 @@ function pingikeh() {
        			else
                 echo ""
        			  	echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+       			  	sleep 2
        			  	vuln
         			fi
               echo ""
@@ -2218,6 +2768,7 @@ elif test $iqbalfaf == 'x'
 	else
 											echo ""
 											echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+											sleep 2
 											menu
 fi
 
@@ -2258,6 +2809,7 @@ elif test $iqbalfaf == 'x'
 	else
 											echo ""
 											echo -e $okegreen " Nomor Tidak Ada Di Daftar"
+											sleep 2
 											menu
 fi
 
