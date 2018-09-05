@@ -45,16 +45,21 @@ echo -e $yellow"$di"
 sleep 2
 clear
 echo -e $BlueF"$iqbal"
+sleep 1
 clear
 echo -e $okegreen"$iqbal"
+sleep 1
 clear
 echo -e $white"$iqbal"
 clear
 echo -e $yellow"$iqbal"
+sleep 1
 clear
 echo -e $red"$iqbal"
+sleep 1
 clear
 echo -e $BlueF"$iqbal"
+sleep 1
 clear
 sleep 1
 echo -e $yellow"=================================="
